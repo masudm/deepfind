@@ -1,2 +1,5 @@
 node_modules
-dist
+build
+secrets.*.js
+
+.DS_Store
