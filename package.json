@@ -1,0 +1,32 @@
+{
+  "name": "deepfind",
+  "version": "1.0.0",
+  "description": "A super powered find in page (CTRL+F) alternative",
+  "main": "index.js",
+  "dependencies": {
+    "chrome-types": "^0.1.160"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.212",
+    "copy-webpack-plugin": "^11.0.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.5",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "scripts": {
+    "build": "webpack --config webpack/webpack.config.js",
+    "watch": "webpack --config webpack/webpack.config.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masudm/deepfind.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/masudm/deepfind/issues"
+  },
+  "homepage": "https://github.com/masudm/deepfind#readme"
+}

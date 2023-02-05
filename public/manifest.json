@@ -1,0 +1,17 @@
+{
+  "name": "Deepfind",
+  "description": "A super powered find in page (CTRL+F) alternative",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {}
+}
