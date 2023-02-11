@@ -4,27 +4,19 @@ export class CreateLogger {
     this.serviceName = serviceName
   }
 
-  private startMessage() {
-    console.info(`Service: ${this.serviceName} at ${new Date()}`)
-  }
-
   public info(output: any) {
-    this.startMessage()
-    console.info(output)
+    console.info(`[${this.serviceName}]: ${output}`)
   }
 
   public warn(output: any) {
-    this.startMessage()
-    console.warn(output)
+    console.warn(`[${this.serviceName}]: ${output}`)
   }
 
   public error(output: any) {
-    this.startMessage()
-    console.log(output)
+    console.log(`[${this.serviceName}]: ${output}`)
   }
 
   public table(output: any) {
-    this.startMessage()
-    console.table(output)
+    console.table(`[${this.serviceName}]: ${output}`)
   }
 }

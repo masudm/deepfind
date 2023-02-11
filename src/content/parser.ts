@@ -16,7 +16,6 @@ export function buildDOMReferenceObject() {
   let DOMTreeWalker = document.createTreeWalker(document.body, NodeFilter.SHOW_ALL, {
     acceptNode: nodeFilter,
   })
-  log.info(DOMTreeWalker)
   let DOMModelObject = {}
   let reachedEndOfTree = false
   let groupIndex = 0
@@ -26,15 +25,13 @@ export function buildDOMReferenceObject() {
   let hidden: { flag: boolean; index: null | number } = { flag: false, index: null }
   let node: Node | null = DOMTreeWalker.root
 
-  if (node) {
-    return
-  }
-
   while (!reachedEndOfTree) {
+    log.info(`Parsing...`)
     node = DOMTreeWalker.nextNode()
 
     if (!node) {
       reachedEndOfTree = true
+      log.info(`Finished parsing`)
     }
 
     let textGroup = { group: [], preformatted: false }
