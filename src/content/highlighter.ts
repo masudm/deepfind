@@ -167,7 +167,7 @@ export const highlightAll = function (
       groupText = groupText.substring(offset + len)
     }
 
-    logger.info(`Group text: ${groupText}`)
+    // logger.info(`Group text: ${groupText}`)
     // logger.info(`charMap: ${JSON.stringify(charMap)}`)
 
     //Wrap matched characters in an element with class indexHighlight and occurrenceIdentifier
@@ -213,7 +213,7 @@ export const highlightAll = function (
       }
 
       matchGroup.text += encode(charMap[key].char)
-      logger.info(`Match group: ${JSON.stringify(matchGroup)}`)
+      // logger.info(`Match group: ${JSON.stringify(matchGroup)}`)
 
       if (charMap[key].boundary) {
         inMatch = false

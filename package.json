@@ -15,19 +15,23 @@
     "node": ">=14.18.0"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "init": "npm i && cp node_modules/tesseract.js/dist/worker.min.js src/background/ocr && cp node_modules/tesseract.js-core/tesseract-core.wasm.js src/background/ocr",
+    "dev": "npm run init && vite",
+    "build": "npm run init && tsc && vite build",
     "preview": "vite preview",
     "fmt": "prettier --write '**/*.{tsx,ts,json,css,scss,md}'"
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "subworkers": "^1.0.1",
+    "tesseract.js": "^4.0.2"
   },
   "devDependencies": {
+    "@crxjs/vite-plugin": "^1.0.12",
+    "@types/chrome": "^0.0.212",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
-    "@crxjs/vite-plugin": "^1.0.12",
     "@vitejs/plugin-react": "^1.3.2",
     "prettier": "^2.7.1",
     "typescript": "^4.6.4",
